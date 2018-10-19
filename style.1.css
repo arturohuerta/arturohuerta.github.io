@@ -1,0 +1,10 @@
+.Image1 {
+    Width: 450px;
+    Height: 500px;
+    transform: rotate(90deg);
+}
+
+.Intro {
+    Font-size: 15px;
+    padding-left: 50px;
+}
