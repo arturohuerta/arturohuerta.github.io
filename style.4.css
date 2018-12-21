@@ -14,3 +14,29 @@
 .Note {
     font-size: 500px;
 }
+
+.StoryTitle {
+    text-align: center!important;
+    font-size: 25px;
+}
+
+.Story {
+    text-align: center!important;
+}
+
+.WrittenTitle {
+    text-align: center!important;
+    font-size: 25px;
+}
+
+.Written {
+    text-align: center!important;
+}
+
+.video {
+    text-align: center!important;
+}
+
+.Narrartion {
+    text-align: center!important;
+}
