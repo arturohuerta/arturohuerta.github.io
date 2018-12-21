@@ -1,0 +1,16 @@
+.buttons {
+    position:absolute;
+    left: 650px;
+}
+
+.Flow {
+    left: 250px;
+}
+
+.Game {
+    left: 300px;
+}
+
+.Note {
+    font-size: 500px;
+}

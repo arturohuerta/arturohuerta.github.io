@@ -1,3 +1,8 @@
 .buttons {
-    padding-left: 1250px;
+    position:absolute;
+    left:650px;
+}
+
+.tparagraph {
+    font-size: 35px;
 }
