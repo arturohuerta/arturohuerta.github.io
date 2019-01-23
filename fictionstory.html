@@ -1,0 +1,233 @@
+<!DOCTYPE HTML>
+<html lang "un-us">
+<header>
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ <style>
+ 
+     body{
+         overflow: hidden;
+     }
+     #container{
+         position:absolute;
+         top: 40px;
+         bottom: 0px;
+         left: 0px;
+         right: 0px;
+         background: pink;
+     }
+     #leftpane{
+         width: 56%;
+         height: 100%;
+         /*background: pink;*/
+         float: left;
+     } 
+     #rightpane{
+         width: 44%;
+         height: 100%;
+         /*background: blue;*/
+         float: left;
+     }
+     #buttons{
+         position:absolute;
+         bottom: 50px;
+         left: 56%;
+         right: 0px;
+         height: 50px;
+         /*background: red;*/
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+     
+     .btn{
+         margin: 40px;
+     }
+     
+     #storytext{
+         position: absolute;
+         left: 56%;
+         right: 0px;
+         top: 40px;
+         bottom: 50px;
+         /*background: green;*/
+     }
+     #graphic{
+         max-height: 98%;
+         max-width: 98%;
+         width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+     }
+     
+     #text{
+         color: blue;
+         font-size: 20px;
+     }
+ </style>
+ <table>
+   <tr>
+     <th>
+    <h1 id="name">Fiction Story</h1>
+    </th>
+     <th class="buttontab">
+<ul class="nav justify-content-end">
+  <li class="nav-item">
+    <a class="nav-link active" href="index.html">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="aboutme.html">About Me</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="resume.html">Resume</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="projects.html">Projects</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="contactme.html">Contact Me</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="python.html">Text Adventure Game</a>
+  </li>
+   <li class="nav-item">
+    <a class="nav-link active" href="fictionstory.html">Fiction Story</a>
+  </li>
+</ul>
+</th>
+  </tr>
+  
+  <div id="container">
+      <div id="leftpane">
+        <img id="graphic" src="snas.png" />
+      </div>
+      
+      <div id="rightpane">
+          <div id="storytext">
+              <p id="text">Now this is where the story will be</p>
+          </div>
+          <div id="buttons">
+              <button id="button1" onclick="buttonclick(1)" type="button" class="btn btn-warning">Now</button>
+              <button id="button2" onclick="buttonclick(2)" type="button" class="btn btn-warning">This</button>
+              <button id="button3" onclick="buttonclick(3)" type="button" class="btn btn-warning">Is</button>
+              <button id="button4" onclick="buttonclick(4)" type="button" class="btn btn-warning">Epic</button>
+              
+          </div>
+      </div>
+<script>
+    
+    var graphic = document.getElementById("graphic")
+    var text = document.getElementById("text")
+    var button1 = document.getElementById("button1")
+    var button2 = document.getElementById("button2")
+    var button3 = document.getElementById("button3")
+    var button4 = document.getElementById("button4")
+    var state = "intro"
+    
+    function intro(){
+        text.innerHTML = "Found Deep in the Underground, Snas is sitting at home, busy watching MTT Game Show, when the TV cuts out. Does he attempt to fix the TV?"
+        button1.innerHTML = "Yes"
+        button1.style.display = "block"
+        button2.innerHTML = "no"
+        button2.style.display = "block"
+        button3.style.display = "none"
+        button4.style.display = "none"
+        graphic.src = "/Story Images/chair.jpg"
+    }
+    
+    function FixesIt(){
+        text.innerHTML = "Snas begins flipping through channels, finding that all of them are cut out. With no success, Snas gets irritated by this, and thinks if he should go outside."
+        button1.innerHTML = "Go Outside"
+        button1.style.display = "block"
+        button2.innerHTML = "Stay Inside"
+        button2.style.display = "block"
+        button3.style.display = "none"
+        button4.style.display = "none"
+        graphic.src = "/Story Images/antena.png"
+        
+    }
+    
+    function Checking(){
+        text.innerHTML = "He goes outside and looks around to see if there are any problems. Snas sees the antenna all fine and well what does he do with it?"
+        button1.innerHTML = "Punch It"
+        button1.style.display = "block"
+        button2.innerHTML = "Leave It Alone"
+        button2.style.display = "block"
+        button3.style.display = "none"
+        button4.style.display = "none"
+        graphic.src = "/Story Images/antena.png"
+    }
+    
+    function Punch2(){
+        text.innerHTML = "Snas punches it, he jerks back a bit and goes back inside to check."
+        button1.innerHTML = "That Must Have Hurt"
+        button1.style.display = "block"
+        button2.style.display = "none"
+        button3.style.display = "none"
+        button4.style.display = "none"
+        graphic.src = "/Story Images/Punch.png"
+    }
+    
+    
+    function BoredEnding(){
+        text.innerHTML = "Snas sits there so long he dies of boredom. Bored Ending Restart?"
+        button1.innerHTML = "You have no choice"
+        button1.style.display = "block"
+        button2.style.display = "none"
+        button3.style.display = "none"
+        button4.style.display = "none"
+        graphic.src = "/Story Images/Bored.jpg" 
+        
+    }
+    function buttonclick(button){
+        if (state == "intro"){
+            if (button == 1){
+                state = "FixesIt";
+                FixesIt();
+            }
+            if (button == 2){
+                state = "BoredEnding";
+                BoredEnding();
+            }
+        }
+        if (state == "FixesIt"){
+            if (button == 1){
+                state = "Checking";
+                Checking();
+            }
+            if (button == 2){
+                state = "BoredEnding";
+                BoredEnding();
+            }
+        }
+        if (state == "Checking"){
+            if (button == 1){
+                state = "Punch2";
+                Punch2();
+            }
+            if (button == 2){
+                state = "Looking";
+                Looking();
+            }
+        }
+        if (state == "Punch2"){
+            if (button == 1){
+                state = "FixesIt";
+                FixesIt();
+            }
+        }
+        if(state == "BoredEnding"){
+            if (button == 1){
+                state = "intro";
+                intro();
+        }
+    }
+}
+    
+    
+    intro()
+</script>
+      
+  </div>
+</table>
+</header>

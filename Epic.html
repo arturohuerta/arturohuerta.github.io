@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+<head>
+<meta charset="utf-8">
+<title>Arturo Huerta</title>
+
+</head>
+
+<body>
+    
+    <button type="button" onclick="clkme()" > Click For Epic </button>
+    <p id="ptext">This is about to change<p>
+        
+    <button type="button" onClick =adder() >Adder</button>
+    
+    <button type="button" onClick =epic() >DangEpicButton</button>
+    
+    <p id="name"> My name will go here</p>
+    
+    <p id="id">Enter Random Word</p>
+    
+    <img id="graphic" src="Yes.png" />
+    
+    <button id="picButton" type ="button" onClick=picChange()>Libtard destroyed</button>
+
+    
+<script>
+
+    var state = "minecraft"
+
+    button id="showImg" type="button onclick=showImg()>SHOW<
+    button id="hideImg" type="button onclick"
+    
+    var button2 = document.createElement('button')
+    var buttonText = document.createTextNode("picButton")
+    button2.appendChild(buttonText)
+    button2.setAttribute("onclick", "picChange()")
+    button2.setAttribute("id", "bubblegum")
+    
+    
+    document.body.appendChild(button2)
+    
+    function hideImg(){
+        pic.style.display = "none"
+    }
+    
+    function showImg(){
+        pic.style.display = "true"
+    }
+    
+    
+    function picChange(){
+        
+        if (state == "Big Chungus"){
+            var pic = document.getElementById("graphic")
+            pic.src = "Yes.png"
+            var button = document.getElementById("picButton")
+            button.innerHTML = "Big Chungus"
+            state = "Plus"
+        }
+        else if (state == "Plus"){
+            var pic = document.getElementById("graphic")
+            pic.src = "Plus.png"
+            var button = document.getElementById("picButton")
+            button.innerHTML = "Plus"
+            state = "Ungandan Knukles"
+        }
+            
+        else if (state == "Ugandan Knukles"){
+            var pic = document.getElementById("graphic")
+            pic.src = "Ugandan.jpg"
+            var button = document.getElementById("picButton")
+            button.innerHTML = "Ungandan Knukles"
+            state = "Ugandan Chungus"
+        }
+        
+         else if (state == "Ugandan Chungus"){
+            var pic = document.getElementById("graphic")
+            pic.src = "Ugandan_Chungus.png"
+            var button = document.getElementById("picButton")
+            button.innerHTML = "Equals"
+            state = "Big Chungus"
+         }
+        
+    }
+</script>
+    
+    
+    <script>
+    function clkme(){
+        var ptext = document.getElementById('ptext')
+        ptext.innerHTML = 'Epic Moment'
+        ptext.style.fontSize = '300px'
+        ptext.style.color = 'white'
+        ptext.style.backgroundColor = 'black'
+    }
+    
+    function adder(){
+        var x = 3
+        var y = 4
+        var z = x + y
+        var ptext = document.getElementById('ptext')
+        ptext.innerHTML = z
+        alert("Now this is Epic")
+    }
+    
+    function epic(){
+        var a = 3
+        var b = 23
+        var c = a * b
+        var ptext = document.getElementById('ptext')
+        ptext.innerHTML = c
+        ptext.style.color = 'red'
+        ptext.style.fontSize = '250px'
+    }
+    
+   
+    
+    var word = "Epic" + " " + "Gamer" + " " + "Moment "
+    document.getElementById("name").innerHTML = word
+    
+    var word = "This" + " " + "Is" + " " + "Gonna" + " " + "Be" + " " + "Epic"
+    document.getElementById("id").innerHTML = word
+    
+    var w = 5
+    if (w > 6){
+        document.getElementById("name").innerHTML = "Cool"
+        
+    }
+    else{
+        document.getElementById("name").innerHTML = "Not Cool"
+    }
+    
+    
+</script>
+</body>
+</html>
