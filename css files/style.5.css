@@ -1,0 +1,19 @@
+.buttons {
+    position:absolute;
+    left: 650px;
+}
+
+.WrittenTitle {
+    text-align: center!important;
+    font-size: 25px;
+}
+
+.Written {
+    text-align: center!important;
+}
+
+.video {
+    text-align: center!important;
+    height: 600px;
+    width: 600px;
+}
