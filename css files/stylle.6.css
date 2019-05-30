@@ -1,0 +1,13 @@
+.buttons {
+    position:absolute;
+    left: 650px;
+}
+
+.WrittenTitle {
+    text-align: center!important;
+    font-size: 25px;
+}
+
+.AudVideo {
+     text-align: center!important;
+}
